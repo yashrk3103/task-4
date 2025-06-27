@@ -53,35 +53,30 @@ Configure basic firewall rules using UFW in Kali Linux to allow/deny traffic and
 
 ❓ Interview Questions & Answers
 1. What is a firewall?
-A firewall is a security system that controls the flow of incoming and outgoing network traffic based on predetermined rules.
+A firewall is a security system that monitors and filters incoming and outgoing network traffic based on predefined security rules.
 
-2. Difference between stateful and stateless firewall?
-Stateful: Tracks active connections and makes decisions based on the connection state.
-
-Stateless: Evaluates each packet independently, without context of connection.
+2. What is the difference between stateful and stateless firewalls?
+- Stateful firewalls keep track of active connections and use that context to determine if packets are part of an allowed session.
+- Stateless firewalls treat each packet individually and don’t retain session information.
 
 3. What are inbound and outbound rules?
-Inbound rules: Control traffic coming into your device.
-
-Outbound rules: Control traffic leaving your device.
+- Inbound rules control incoming traffic to your device.
+- Outbound rules control traffic leaving your device.
 
 4. How does UFW simplify firewall management?
-UFW provides an easy-to-use command-line interface to manage iptables, abstracting complex configurations.
+UFW provides a user-friendly command-line interface to manage `iptables`, making it easier to allow or block traffic without writing complex rules.
 
-5. Why block port 23 (Telnet)?
-Telnet transmits data in plaintext, making it insecure. Blocking port 23 prevents potential unauthorized access.
+5. Why should port 23 (Telnet) be blocked?
+Telnet sends data in plaintext and is not encrypted. Blocking port 23 helps prevent unauthorized or insecure access.
 
-6. What are common firewall mistakes?
-Accidentally blocking essential services (e.g., SSH)
-
-Leaving unused ports open
-
-Not setting a default deny policy
-
-Misconfigured NAT rules
+6. What are some common firewall mistakes?
+- Forgetting to allow SSH and locking yourself out
+- Leaving unnecessary ports open
+- Misconfigured rule order
+- Not setting a default deny policy
 
 7. How does a firewall improve network security?
-It filters out malicious or unauthorized traffic, limiting attack vectors and protecting internal systems.
+It controls traffic based on policies, limits exposure to threats, and blocks unauthorized access to services and ports.
 
 8. What is NAT in firewalls?
-NAT (Network Address Translation) maps private IP addresses to public ones, allowing multiple devices to share a single IP securely.
+NAT (Network Address Translation) maps private IP addresses to a public IP address, allowing internal devices to securely access the internet.
